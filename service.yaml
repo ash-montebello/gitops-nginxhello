@@ -9,8 +9,8 @@ metadata:
     fluxcd.io/ignore: "false"
 spec:
   ports:
-  - port: 80
+  - port: 8081
     protocol: TCP
-    targetPort: 80
+    targetPort: 8081
   selector:
     app: nginxhello
