@@ -8,9 +8,8 @@ metadata:
   annotations:
     fluxcd.io/ignore: "false"
 spec:
-  type: NodePort
   ports:
-  - port: 31317
+  - port: 80
     protocol: TCP
     targetPort: 80
   selector:
