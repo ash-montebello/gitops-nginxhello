@@ -8,8 +8,9 @@ metadata:
     fluxcd.io/ignore: "false"
     kubernetes.io/ingress.class: "nginx"
 spec:
+  ingressClassName: ingress-nginx
   rules:
-    - host: nginxhello.local
+    - host: nginxhello.localdev.me
       http:
         paths:
           - path: /
