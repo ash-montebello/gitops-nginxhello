@@ -22,7 +22,7 @@ spec:
       - image: nbrown/nginxhello:1.19.0
         name: nginxhello
         ports:
-        - containerPort: 8081
+        - containerPort: 80
         env:
         - name: NODE_NAME
           valueFrom:
@@ -32,11 +32,11 @@ spec:
           initialDelaySeconds: 2
           periodSeconds: 2
           httpGet:
-            port: 8081
+            port: 80
             path: /healthz/live
         readinessProbe:
           initialDelaySeconds: 2
           periodSeconds: 2
           httpGet:
-            port: 8081
+            port: 80
             path: /healthz/ready
